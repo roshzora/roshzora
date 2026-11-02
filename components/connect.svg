@@ -1,0 +1,53 @@
+<svg width="800" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#00E5FF" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="200" fill="#050505" />
+
+  <!-- Zenitsu Pointing (Placeholder) -->
+  <g transform="translate(50, 20)">
+    <rect width="200" height="160" rx="20" fill="#1A1A1A" stroke="#FFD700" stroke-width="1" opacity="0.5" />
+    <text x="100" y="80" text-anchor="middle" fill="#FFD700" font-family="sans-serif" font-size="14">ZENITSU_POINTING.PNG</text>
+    
+    <!-- Spark effects around the character -->
+    <circle r="2" fill="#00E5FF" filter="url(#glow)">
+      <animate attributeName="cx" values="0;20;0" dur="0.2s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="20;80;20" dur="0.3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0" dur="0.2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Link Cards -->
+  <g transform="translate(300, 40)">
+    <!-- Card 1: GitHub -->
+    <g>
+      <rect width="200" height="50" rx="10" fill="#1A1A1A" stroke="#333" stroke-width="1">
+        <animateTransform attributeName="transform" type="translate" values="0,0; 5,0; 0,0" dur="3s" repeatCount="indefinite" />
+      </rect>
+      <text x="20" y="30" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="16">GitHub</text>
+      <path d="M 170 20 L 180 25 L 170 30" stroke="#FFD700" stroke-width="2" fill="none" />
+    </g>
+
+    <!-- Card 2: Twitter/X -->
+    <g transform="translate(0, 70)">
+      <rect width="200" height="50" rx="10" fill="#1A1A1A" stroke="#333" stroke-width="1">
+        <animateTransform attributeName="transform" type="translate" values="0,0; 5,0; 0,0" dur="3s" begin="1s" repeatCount="indefinite" />
+      </rect>
+      <text x="20" y="30" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="16">Twitter / X</text>
+      <path d="M 170 20 L 180 25 L 170 30" stroke="#FFD700" stroke-width="2" fill="none" />
+    </g>
+
+    <!-- Card 3: LinkedIn -->
+    <g transform="translate(0, 140)">
+      <rect width="200" height="50" rx="10" fill="#1A1A1A" stroke="#333" stroke-width="1">
+        <animateTransform attributeName="transform" type="translate" values="0,0; 5,0; 0,0" dur="3s" begin="2s" repeatCount="indefinite" />
+      </rect>
+      <text x="20" y="30" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="16">LinkedIn</text>
+      <path d="M 170 20 L 180 25 L 170 30" stroke="#FFD700" stroke-width="2" fill="none" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+name: Update 3D Contribution City
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Daily at midnight
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-city:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update Contribution City
+        uses: yoshi389111/github-profile-3d-contrib@main
+        with:
+          username: roshzora

@@ -1,0 +1,106 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="coreGrad">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#050505" />
+    </radialGradient>
+    <filter id="coreGlow">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="400" fill="#050505" />
+
+  <!-- The Thunder Core -->
+  <g transform="translate(400, 200)">
+    <circle r="40" fill="url(#coreGrad)" filter="url(#coreGlow)">
+      <animate attributeName="r" values="35;45;35" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text text-anchor="middle" y="5" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="12">CORE</text>
+  </g>
+
+  <!-- Orbits -->
+  <g stroke="#333" stroke-width="1" fill="none">
+    <!-- Outer Orbit -->
+    <ellipse cx="400" cy="200" rx="150" ry="80" opacity="0.5" />
+    <!-- Middle Orbit -->
+    <ellipse cx="400" cy="200" rx="100" ry="50" opacity="0.5" />
+    <!-- Inner Orbit -->
+    <ellipse cx="400" cy="200" rx="60" ry="30" opacity="0.5" />
+  </g>
+
+  <!-- Rotating Icons -->
+  <!-- We use a group that rotates, and the icons are positioned on the ellipse -->
+  
+  <!-- Outer Orbit Group -->
+  <g transform="translate(400, 200)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite" />
+      <!-- Icon 1 (React) -->
+      <g transform="translate(150, 0)">
+        <circle r="15" fill="#1A1A1A" stroke="#61DAFB" stroke-width="2" />
+        <text text-anchor="middle" y="4" fill="#61DAFB" font-family="sans-serif" font-size="10" font-weight="bold">R</text>
+        <!-- Moon 1 -->
+        <g>
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="3s" repeatCount="indefinite" />
+          <circle cx="25" cy="0" r="5" fill="#FFD700" />
+        </g>
+        <!-- Moon 2 -->
+        <g>
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="5s" repeatCount="indefinite" />
+          <circle cx="25" cy="0" r="5" fill="#00E5FF" />
+        </g>
+      </g>
+      <!-- Icon 2 -->
+      <g transform="translate(-150, 0)">
+        <circle r="15" fill="#1A1A1A" stroke="#3178C6" stroke-width="2" />
+        <text text-anchor="middle" y="4" fill="#3178C6" font-family="sans-serif" font-size="10" font-weight="bold">TS</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Middle Orbit Group -->
+  <g transform="translate(400, 200)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="15s" repeatCount="indefinite" />
+      <g transform="translate(100, 0)">
+        <circle r="15" fill="#1A1A1A" stroke="#FFD700" stroke-width="2" />
+        <text text-anchor="middle" y="4" fill="#FFD700" font-family="sans-serif" font-size="10" font-weight="bold">FM</text>
+      </g>
+      <g transform="translate(-100, 0)">
+        <circle r="15" fill="#1A1A1A" stroke="#00E5FF" stroke-width="2" />
+        <text text-anchor="middle" y="4" fill="#00E5FF" font-family="sans-serif" font-size="10" font-weight="bold">3JS</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Inner Orbit Group -->
+  <g transform="translate(400, 200)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite" />
+      <g transform="translate(60, 0)">
+        <circle r="15" fill="#1A1A1A" stroke="#FFD700" stroke-width="2" />
+        <text text-anchor="middle" y="4" fill="#FFD700" font-family="sans-serif" font-size="10" font-weight="bold">AI</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Chip Grid -->
+  <g transform="translate(250, 330)">
+    <rect x="0" y="0" width="80" height="30" rx="5" fill="#1A1A1A" stroke="#333" stroke-width="1">
+      <animate attributeName="stroke" values="#333;#FFD700;#333" dur="3s" repeatCount="indefinite" />
+    </rect>
+    <text x="40" y="20" text-anchor="middle" fill="#A0A0A0" font-family="sans-serif" font-size="12">Frontend</text>
+    
+    <rect x="90" y="0" width="80" height="30" rx="5" fill="#1A1A1A" stroke="#333" stroke-width="1">
+      <animate attributeName="stroke" values="#333;#FFD700;#333" dur="3s" begin="1s" repeatCount="indefinite" />
+    </rect>
+    <text x="130" y="20" text-anchor="middle" fill="#A0A0A0" font-family="sans-serif" font-size="12">Motion</text>
+    
+    <rect x="180" y="0" width="80" height="30" rx="5" fill="#1A1A1A" stroke="#333" stroke-width="1">
+      <animate attributeName="stroke" values="#333;#FFD700;#333" dur="3s" begin="2s" repeatCount="indefinite" />
+    </rect>
+    <text x="220" y="20" text-anchor="middle" fill="#A0A0A0" font-family="sans-serif" font-size="12">AI / Data</text>
+  </g>
+</svg>

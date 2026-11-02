@@ -1,0 +1,91 @@
+<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#00E5FF" />
+    </linearGradient>
+    <filter id="glassBlur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="300" fill="#050505" />
+
+  <!-- Left Card: Capabilities -->
+  <g transform="translate(40, 40)">
+    <rect width="340" height="220" rx="15" fill="#1A1A1A" stroke="url(#borderGrad)" stroke-width="1" />
+    <text x="20" y="35" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="20">What I Build</text>
+    
+    <!-- Browser window mockup -->
+    <rect x="20" y="50" width="300" height="140" rx="8" fill="#0D0D0D" stroke="#333" stroke-width="1" />
+    <rect x="20" y="50" width="300" height="20" rx="8" fill="#1A1A1A" />
+    <circle cx="30" cy="60" r="3" fill="#FF5F56" />
+    <circle cx="40" cy="60" r="3" fill="#FFBD2E" />
+    <circle cx="50" cy="60" r="3" fill="#27C93F" />
+    <text x="65" y="64" fill="#666" font-family="monospace" font-size="10">roshzora.dev/projects</text>
+    
+    <!-- Capability Rows -->
+    <g transform="translate(30, 85)">
+      <text x="0" y="0" fill="#A0A0A0" font-family="sans-serif" font-size="14">⚡ High-Performance Frontends</text>
+      <rect x="0" y="10" width="270" height="4" rx="2" fill="#333" />
+      <rect x="0" y="10" width="240" height="4" rx="2" fill="#FFD700">
+        <animate attributeName="width" values="0;240" dur="1.5s" fill="freeze" />
+      </rect>
+      
+      <text x="0" y="40" fill="#A0A0A0" font-family="sans-serif" font-size="14">🌀 Complex SVG Motion</text>
+      <rect x="0" y="50" width="270" height="4" rx="2" fill="#333" />
+      <rect x="0" y="50" width="200" height="4" rx="2" fill="#00E5FF">
+        <animate attributeName="width" values="0;200" dur="1.8s" fill="freeze" />
+      </rect>
+      
+      <text x="0" y="80" fill="#A0A0A0" font-family="sans-serif" font-size="14">⚡ Performance Optimization</text>
+      <rect x="0" y="90" width="270" height="4" rx="2" fill="#333" />
+      <rect x="0" y="90" width="260" height="4" rx="2" fill="#FFD700">
+        <animate attributeName="width" values="0;260" dur="2s" fill="freeze" />
+      </rect>
+    </g>
+  </g>
+
+  <!-- Right Card: Hobbies Carousel -->
+  <g transform="translate(420, 40)">
+    <rect width="340" height="220" rx="15" fill="#1A1A1A" stroke="url(#borderGrad)" stroke-width="1" />
+    <text x="20" y="35" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="20">Zen Mode</text>
+    
+    <g transform="translate(20, 60)">
+      <!-- Hobby Slide 1 -->
+      <g>
+        <text x="0" y="30" fill="#FFFFFF" font-family="sans-serif" font-size="18">⚔️ Mastering the Blade</text>
+        <text x="0" y="55" fill="#A0A0A0" font-family="sans-serif" font-size="14">Studying traditional swordsmanship</text>
+        <animate attributeName="opacity" values="1;0" dur="4s" repeatCount="indefinite" />
+      </g>
+      <!-- Hobby Slide 2 -->
+      <g opacity="0">
+        <text x="0" y="30" fill="#FFFFFF" font-family="sans-serif" font-size="18">⚡ Digital Art</text>
+        <text x="0" y="55" fill="#A0A0A0" font-family="sans-serif" font-size="14">Creating electric-themed visuals</text>
+        <animate attributeName="opacity" values="0;1;0" dur="4s" begin="1.3s" repeatCount="indefinite" />
+      </g>
+      <!-- Hobby Slide 3 -->
+      <g opacity="0">
+        <text x="0" y="30" fill="#FFFFFF" font-family="sans-serif" font-size="18">🍵 Tea Ceremonies</text>
+        <text x="0" y="55" fill="#A0A0A0" font-family="sans-serif" font-size="14">Finding peace in the chaos</text>
+        <animate attributeName="opacity" values="0;1;0" dur="4s" begin="2.6s" repeatCount="indefinite" />
+      </g>
+      
+      <!-- Progress Bars (Instagram style) -->
+      <g transform="translate(0, 80)">
+        <rect x="0" y="0" width="80" height="3" rx="1.5" fill="#333" />
+        <rect x="0" y="0" width="80" height="3" rx="1.5" fill="#FFD700">
+          <animate attributeName="width" values="0;80" dur="4s" repeatCount="indefinite" />
+        </rect>
+        <rect x="90" y="0" width="80" height="3" rx="1.5" fill="#333" />
+        <rect x="90" y="0" width="80" height="3" rx="1.5" fill="#FFD700">
+          <animate attributeName="width" values="0;80" dur="4s" begin="1.3s" repeatCount="indefinite" />
+        </rect>
+        <rect x="180" y="0" width="80" height="3" rx="1.5" fill="#333" />
+        <rect x="180" y="0" width="80" height="3" rx="1.5" fill="#FFD700">
+          <animate attributeName="width" values="0;80" dur="4s" begin="2.6s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    </g>
+  </g>
+</svg>
