@@ -1,0 +1,36 @@
+<svg width="100%" height="auto" viewBox="0 0 880 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="divGradLeft" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="60%" stop-color="#00F0FF" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="divGradRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="60%" stop-color="#00F0FF" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0" />
+    </linearGradient>
+    <filter id="divGlow">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Left Line -->
+  <line x1="20" y1="18" x2="410" y2="18" stroke="url(#divGradLeft)" stroke-width="1.5" />
+  <circle cx="410" cy="18" r="2.5" fill="#FFD700" filter="url(#divGlow)" />
+
+  <!-- Center Thunder Crest -->
+  <g transform="translate(440, 18)">
+    <polygon points="0,-12 12,0 0,12 -12,0" fill="#0E1017" stroke="#FFD700" stroke-width="1.2" filter="url(#divGlow)" />
+    <!-- Mini Lightning -->
+    <path d="M 0 -7 L 3 -1 L -1 -1 L 2 7 L -3 1 L 1 1 Z" fill="#FFD700" />
+  </g>
+
+  <!-- Right Line -->
+  <circle cx="470" cy="18" r="2.5" fill="#FFD700" filter="url(#divGlow)" />
+  <line x1="470" y1="18" x2="860" y2="18" stroke="url(#divGradRight)" stroke-width="1.5" />
+</svg>

@@ -1,53 +1,54 @@
-<svg width="800" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" height="auto" viewBox="0 0 880 110" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="linkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FFD700" />
-      <stop offset="100%" stop-color="#00E5FF" />
+    <linearGradient id="connBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0D14" />
+      <stop offset="100%" stop-color="#05060A" />
     </linearGradient>
+
+    <linearGradient id="connBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#00F0FF" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0.8" />
+    </linearGradient>
+
+    <filter id="sigGlow">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes signalWave {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 1; }
+      }
+      .wave-dot { animation: signalWave 2s infinite ease-in-out; }
+      .conn-font { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'JetBrains Mono', monospace; }
+    </style>
   </defs>
 
-  <rect width="800" height="200" fill="#050505" />
+  <rect x="2" y="2" width="876" height="106" rx="12" fill="url(#connBg)" stroke="url(#connBorder)" stroke-width="1.2" />
 
-  <!-- Zenitsu Pointing (Placeholder) -->
-  <g transform="translate(50, 20)">
-    <rect width="200" height="160" rx="20" fill="#1A1A1A" stroke="#FFD700" stroke-width="1" opacity="0.5" />
-    <text x="100" y="80" text-anchor="middle" fill="#FFD700" font-family="sans-serif" font-size="14">ZENITSU_POINTING.PNG</text>
-    
-    <!-- Spark effects around the character -->
-    <circle r="2" fill="#00E5FF" filter="url(#glow)">
-      <animate attributeName="cx" values="0;20;0" dur="0.2s" repeatCount="indefinite" />
-      <animate attributeName="cy" values="20;80;20" dur="0.3s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="1;0" dur="0.2s" repeatCount="indefinite" />
-    </circle>
+  <!-- Signal Pulse Left -->
+  <g transform="translate(40, 55)">
+    <circle cx="0" cy="0" r="16" fill="none" stroke="#FFD700" stroke-opacity="0.3" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="10" fill="none" stroke="#00F0FF" stroke-opacity="0.5" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="4" fill="#FFD700" filter="url(#sigGlow)" class="wave-dot" />
   </g>
 
-  <!-- Link Cards -->
-  <g transform="translate(300, 40)">
-    <!-- Card 1: GitHub -->
-    <g>
-      <rect width="200" height="50" rx="10" fill="#1A1A1A" stroke="#333" stroke-width="1">
-        <animateTransform attributeName="transform" type="translate" values="0,0; 5,0; 0,0" dur="3s" repeatCount="indefinite" />
-      </rect>
-      <text x="20" y="30" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="16">GitHub</text>
-      <path d="M 170 20 L 180 25 L 170 30" stroke="#FFD700" stroke-width="2" fill="none" />
-    </g>
+  <!-- Content Center -->
+  <g transform="translate(80, 42)">
+    <text x="0" y="0" fill="#FFD700" class="conn-font" font-size="11" font-weight="800" letter-spacing="2">⚡ TRANSMISSION PROTOCOL // INITIATE CONTACT</text>
+    <text x="0" y="24" fill="#FFFFFF" class="conn-font" font-size="13.5" font-weight="600">Open for cutting-edge Mobile, AI-RAG Systems &amp; Full-Stack engineering.</text>
+    <text x="0" y="44" fill="#9CA3AF" class="conn-font" font-size="11">Available for contract, high-impact ventures, or tech exchange.</text>
+  </g>
 
-    <!-- Card 2: Twitter/X -->
-    <g transform="translate(0, 70)">
-      <rect width="200" height="50" rx="10" fill="#1A1A1A" stroke="#333" stroke-width="1">
-        <animateTransform attributeName="transform" type="translate" values="0,0; 5,0; 0,0" dur="3s" begin="1s" repeatCount="indefinite" />
-      </rect>
-      <text x="20" y="30" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="16">Twitter / X</text>
-      <path d="M 170 20 L 180 25 L 170 30" stroke="#FFD700" stroke-width="2" fill="none" />
-    </g>
-
-    <!-- Card 3: LinkedIn -->
-    <g transform="translate(0, 140)">
-      <rect width="200" height="50" rx="10" fill="#1A1A1A" stroke="#333" stroke-width="1">
-        <animateTransform attributeName="transform" type="translate" values="0,0; 5,0; 0,0" dur="3s" begin="2s" repeatCount="indefinite" />
-      </rect>
-      <text x="20" y="30" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="16">LinkedIn</text>
-      <path d="M 170 20 L 180 25 L 170 30" stroke="#FFD700" stroke-width="2" fill="none" />
-    </g>
+  <!-- Right Side Status -->
+  <g transform="translate(720, 45)">
+    <rect width="120" height="26" rx="13" fill="#141824" stroke="#22C55E" stroke-width="1" />
+    <circle cx="16" cy="13" r="3.5" fill="#22C55E" />
+    <text x="28" y="17" fill="#E5E7EB" class="conn-font" font-size="10" font-weight="700">STATUS: OPEN</text>
   </g>
 </svg>
